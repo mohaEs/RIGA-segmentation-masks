@@ -9,7 +9,7 @@ Extracted masks: </br>
 <img src="./images/img1.png" width="850" title="input"> </br>
 
 original dataset annotations: </br>
-<img src="./images/img2.png" width="550" title="input">
+<img src="./images/img2.png" width="500" title="input">
 
 
 ## Citation 
