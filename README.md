@@ -6,10 +6,10 @@ The segmentation masks of each annotation is also provided. (*-segments director
 You can simply download the the zip file: https://github.com/mohaEs/RIGA-segmentation-masks/raw/main/RIGA_masks.zip
 
 Extracted masks: </br>
-<img src="./images/img1.png" width="550" title="input"> </br>
+<img src="./images/img1.png" width="850" title="input"> </br>
 
 original dataset annotations: </br>
-<img src="./images/img2.png" width="350" title="input">
+<img src="./images/img2.png" width="550" title="input">
 
 
 ## Citation 
