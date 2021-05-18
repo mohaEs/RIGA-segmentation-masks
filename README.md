@@ -1,0 +1,2 @@
+# RIGA segmentation masks
+ 
