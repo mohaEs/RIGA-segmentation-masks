@@ -54,15 +54,15 @@ def combine_masks(in_dir, folder_out, imgname):
         soft_mask_disc=soft_mask_disc.astype(np.uint8)
         soft_mask_cup=soft_mask_cup.astype(np.uint8)
  
-        io.imsave(os.path.join(folder_out, imgname+'_soft_disc.png'), soft_mask_disc, check_contrast=False)    
-        io.imsave(os.path.join(folder_out, imgname+'_soft_cup.png'), soft_mask_cup, check_contrast=False)
+        io.imsave(os.path.join(folder_out,'soft_disc', imgname+'prime.png'), soft_mask_disc, check_contrast=False)    
+        io.imsave(os.path.join(folder_out,'soft_cup', imgname+'prime.png'), soft_mask_cup, check_contrast=False)
         
         np_array=np.zeros(shape=soft_mask_disc.shape)        
         np_array=np.where(soft_mask_disc>127,255,np_array)
         np_array=np.where(soft_mask_cup>127,128,np_array)
         np_array=np_array.astype(np.uint8)
         
-        io.imsave(os.path.join(folder_out, imgname+'_hard.png'), np_array, check_contrast=False)
+        io.imsave(os.path.join(folder_out,'hards', imgname+'prime.png'), np_array, check_contrast=False)
         
         return 'Done'
     
@@ -81,6 +81,10 @@ print('==> preparing Messidor data ...')
 
 if not os.path.exists(folder_out):
     os.makedirs(folder_out)
+    os.mkdir(os.path.join(folder_out,'hards'))
+    os.mkdir(os.path.join(folder_out,'soft_disc'))
+    os.mkdir(os.path.join(folder_out,'soft_cup'))
+
 
 filenames=[]
 for root, dirs, files in os.walk(folder_1):
@@ -108,6 +112,9 @@ print('==> preparing MagrabiaMale data ...')
 
 if not os.path.exists(folder_out):
     os.makedirs(folder_out)
+    os.mkdir(os.path.join(folder_out,'hards'))
+    os.mkdir(os.path.join(folder_out,'soft_disc'))
+    os.mkdir(os.path.join(folder_out,'soft_cup'))
 
 filenames=[]
 for root, dirs, files in os.walk(folder):
@@ -132,6 +139,9 @@ print('==> preparing MagrabiaFemale data ...')
 
 if not os.path.exists(folder_out):
     os.makedirs(folder_out)
+    os.mkdir(os.path.join(folder_out,'hards'))
+    os.mkdir(os.path.join(folder_out,'soft_disc'))
+    os.mkdir(os.path.join(folder_out,'soft_cup'))
 
 filenames=[]
 for root, dirs, files in os.walk(folder):
@@ -161,6 +171,10 @@ print('==> preparing BinRushed1-Corrected data ...')
 
 if not os.path.exists(folder_out):
     os.makedirs(folder_out)
+    os.mkdir(os.path.join(folder_out,'hards'))
+    os.mkdir(os.path.join(folder_out,'soft_disc'))
+    os.mkdir(os.path.join(folder_out,'soft_cup'))
+
 
 filenames=[]
 for root, dirs, files in os.walk(folder):
@@ -186,6 +200,10 @@ print('==> preparing BinRushed2 data ...')
 
 if not os.path.exists(folder_out):
     os.makedirs(folder_out)
+    os.mkdir(os.path.join(folder_out,'hards'))
+    os.mkdir(os.path.join(folder_out,'soft_disc'))
+    os.mkdir(os.path.join(folder_out,'soft_cup'))
+
 
 filenames=[]
 for root, dirs, files in os.walk(folder):
@@ -211,6 +229,10 @@ print('==> preparing BinRushed3 data ...')
 
 if not os.path.exists(folder_out):
     os.makedirs(folder_out)
+    os.mkdir(os.path.join(folder_out,'hards'))
+    os.mkdir(os.path.join(folder_out,'soft_disc'))
+    os.mkdir(os.path.join(folder_out,'soft_cup'))
+
 
 filenames=[]
 for root, dirs, files in os.walk(folder):
@@ -236,7 +258,11 @@ print('==> preparing BinRushed4 data ...')
 
 if not os.path.exists(folder_out):
     os.makedirs(folder_out)
+    os.mkdir(os.path.join(folder_out,'hards'))
+    os.mkdir(os.path.join(folder_out,'soft_disc'))
+    os.mkdir(os.path.join(folder_out,'soft_cup'))
 
+    
 filenames=[]
 for root, dirs, files in os.walk(folder):
     for filename in files:
