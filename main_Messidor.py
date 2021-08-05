@@ -36,12 +36,13 @@ def make_masks(in_dir, out_dir, filename):
                 filename2=imgname+'-'+str(i+1)+'.jpg'
                 #print(filename2)
                 
-                image=io.imread(os.path.join(in_dir,filename2), as_gray=False)                
-            diff=image_prime-image
+                image=io.imread(os.path.join(in_dir,filename2), as_gray=False)       
+
+            diff=abs(image_prime-image)
             diff=colorconv.rgb2gray(diff)
             diff=(255*diff)/np.max(diff)
             
-            contours = measure.find_contours(diff, 0.8)
+            contours = measure.find_contours(diff, 0.9)
             
             if len(contours)!=4 :
                 if len(contours)!=5 :

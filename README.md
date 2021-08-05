@@ -59,6 +59,8 @@ In this step, all the segments of each prime are combined, soft and hard masks a
 
 > python main_CombineMasks.py
 
+The untitled files are used for developing and also manual fixation of the ones were skipped in above automated process.
+
 ## Sources:
 
 The region growing part is modified from: </br>

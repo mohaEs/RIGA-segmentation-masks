@@ -14,16 +14,20 @@ from skimage import io
 from skimage.color import colorconv
 
 
-image=io.imread('./MESSIDOR/image1-1.tif', as_gray=False)
-image_prime=io.imread('./MESSIDOR/image1prime.tif', as_gray=False)
+image=io.imread('./image315-4.tif', as_gray=False)
+image_prime=io.imread('./MESSIDOR/image315prime.tif', as_gray=False)
 
 image=(255*image)/np.max(image)
 image_prime=(255*image_prime)/np.max(image_prime)
 
-diff=abs(image_prime-image)
+# diff=abs(image_prime-image)
+# diff=colorconv.rgb2gray(diff)
+# diff=(255*diff)/np.max(diff)
+
 #plt.imshow(diff)
 
-
+diff=abs(image_prime-image)
+plt.imshow(diff)
 diff=colorconv.rgb2gray(diff)
 diff=(255*diff)/np.max(diff)
 
@@ -33,7 +37,7 @@ diff=(255*diff)/np.max(diff)
 #plt.imshow(diff)
 
 # Find contours at a constant value of 0.8 
-contours = measure.find_contours(diff, 0.9)
+contours = measure.find_contours(diff, 50)
 
 ## Display the image and plot all contours found
 #fig, ax = plt.subplots()
@@ -47,8 +51,6 @@ contours = measure.find_contours(diff, 0.9)
 #ax.set_yticks([])
 #plt.show()
 
-if len(contours)!=4:
-    print('warning')
 
 contour_lengths=np.zeros(shape=(len(contours),1),dtype=np.uint64)
 for i in range(len(contours)):
