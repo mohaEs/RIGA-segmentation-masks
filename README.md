@@ -2,7 +2,7 @@
  
 ## Downloand the masks 
 This repository contains the soft and hard segmentation masks of the fundus images of RIGA dataset. (*-Masks directories) </br>
-The segmentation masks of each annotation is also provided. (*-segments directories) </br>
+The segmentation masks of each annotatators are also provided. (*-segments directories) </br>
 You can simply download the the zip file: https://github.com/mohaEs/RIGA-segmentation-masks/raw/main/RIGA_masks.zip
 
 Extracted masks: </br>
