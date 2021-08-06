@@ -36,8 +36,9 @@ def make_masks(in_dir, out_dir, filename):
                 filename2=imgname+'-'+str(i+1)+'.jpg'
                 #print(filename2)
                 
-                image=io.imread(os.path.join(in_dir,filename2), as_gray=False)                
-            diff=image_prime-image
+                image=io.imread(os.path.join(in_dir,filename2), as_gray=False)         
+
+            diff=abs(image_prime-image)
             diff=colorconv.rgb2gray(diff)
             diff=(255*diff)/np.max(diff)
             
@@ -102,7 +103,7 @@ for f in tqdm(range(len(filenames))):
 folder='./Magrabia/MagrabiFemale'
 folder_out='./Magrabia-segments/MagrabiFemale'
 
-print('==> preparing MagrabiaFeale data ...')
+print('==> preparing MagrabiaFemale data ...')
 
 if not os.path.exists(folder_out):
     os.makedirs(folder_out)
