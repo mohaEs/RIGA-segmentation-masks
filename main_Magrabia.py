@@ -24,6 +24,7 @@ def make_masks(in_dir, out_dir, filename):
         image_prime=io.imread(os.path.join(in_dir,filename))
         imgname=filename[:-9] 
         
+        
         for i in range(6):
             
             try:
@@ -38,14 +39,14 @@ def make_masks(in_dir, out_dir, filename):
                 
                 image=io.imread(os.path.join(in_dir,filename2), as_gray=False)         
 
+
             diff=abs(image_prime-image)
             diff=colorconv.rgb2gray(diff)
             diff=(255*diff)/np.max(diff)
             
             contours = measure.find_contours(diff, 0.8)
             
-            if len(contours)!=4 :
-                if len(contours)!=5 :
+            if len(contours)!=4 and len(contours)!=5:                
                     print('==> skipped:', filename2)
             else:
             
@@ -85,21 +86,22 @@ folder_out='./Magrabia-segments/MagrabiaMale'
 print('==> preparing MagrabiaMale data ...')
 
 if not os.path.exists(folder_out):
-    os.makedirs(folder_out)
+   os.makedirs(folder_out)
 
 filenames=[]
 for root, dirs, files in os.walk(folder):
-    for filename in files:
-        filenames.append(filename)
-                
+   for filename in files:
+       filenames.append(filename)
+               
 for f in tqdm(range(len(filenames))):
-    filename=filenames[f]
-    if filename.find('prime') !=-1:
-        imgname=filename[:-9]    
-        
-        make_masks(folder, folder_out, filename)  
+   filename=filenames[f]
+   if filename.find('prime') !=-1:
+       imgname=filename[:-9]    
+       
+       make_masks(folder, folder_out, filename)  
 
 #%%
+
 folder='./Magrabia/MagrabiFemale'
 folder_out='./Magrabia-segments/MagrabiFemale'
 
@@ -118,4 +120,8 @@ for f in tqdm(range(len(filenames))):
     if filename.find('prime') !=-1:
         imgname=filename[:-9]    
         
-        make_masks(folder, folder_out, filename)          
+        make_masks(folder, folder_out, filename)   
+    elif filename=='image48.tif':
+        print('==> skipped image48: there is no prime image')
+        
+        

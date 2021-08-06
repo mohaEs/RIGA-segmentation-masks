@@ -44,8 +44,7 @@ def make_masks(in_dir, out_dir, filename):
             
             contours = measure.find_contours(diff, 0.9)
             
-            if len(contours)!=4 :
-                if len(contours)!=5 :
+            if len(contours)!=4 and len(contours)!=5:                
                     print('==> skipped:', filename2)
             else:
             
