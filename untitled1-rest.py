@@ -12,10 +12,11 @@ import scipy.ndimage as ndimage
 from skimage import measure
 from skimage import io
 from skimage.color import colorconv
-
-
-image=io.imread('./image315-4.tif', as_gray=False)
-image_prime=io.imread('./MESSIDOR/image315prime.tif', as_gray=False)
+from skimage.morphology import square
+from skimage.morphology import erosion
+#
+image=io.imread('./Magrabia/MagrabiFemale/image38-2.tif', as_gray=False)
+image_prime=io.imread('./Magrabia/MagrabiFemale/image38prime.tif', as_gray=False)
 
 image=(255*image)/np.max(image)
 image_prime=(255*image_prime)/np.max(image_prime)
@@ -37,7 +38,7 @@ diff=(255*diff)/np.max(diff)
 #plt.imshow(diff)
 
 # Find contours at a constant value of 0.8 
-contours = measure.find_contours(diff, 50)
+contours = measure.find_contours(diff, 0.8)
 
 ## Display the image and plot all contours found
 #fig, ax = plt.subplots()
@@ -63,17 +64,20 @@ contour=contours[sort_info[-1]]
 r_mask_disc = np.zeros_like(diff, dtype='bool')
 r_mask_disc[np.round(contour[:, 0]).astype('int'), np.round(contour[:, 1]).astype('int')] = 1
 r_mask_disc = ndimage.binary_fill_holes(r_mask_disc)
+#plt.imshow(r_mask_disc)
+r_mask_disc=erosion(r_mask_disc, square(4))
 plt.imshow(r_mask_disc)
 
 contour=contours[sort_info[-3]]
 r_mask_cup = np.zeros_like(diff, dtype='bool')
 r_mask_cup[np.round(contour[:, 0]).astype('int'), np.round(contour[:, 1]).astype('int')] = 1
 r_mask_cup = ndimage.binary_fill_holes(r_mask_cup)
+r_mask_cup=erosion(r_mask_cup, square(4))
 plt.imshow(r_mask_cup)
 
 mask=np.zeros(shape = r_mask_cup.shape, dtype=np.uint8)
 mask=np.where(r_mask_disc==1,255,mask)
 mask=np.where(r_mask_cup==1,128,mask)
-
 plt.imshow(mask)
+
 io.imsave('mask.png', mask)

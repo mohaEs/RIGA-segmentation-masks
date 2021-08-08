@@ -16,6 +16,11 @@ from tqdm import tqdm
 from skimage import draw
 from region_growing import regionGrow
 from skimage.morphology import convex_hull_image
+from skimage.morphology import binary_opening
+from skimage.morphology import binary_closing
+from skimage.morphology import erosion
+from skimage.morphology import dilation
+from skimage.morphology import square
 
 #%%
 def make_masks(in_dir, out_dir, filename):
@@ -188,12 +193,14 @@ def make_masks(in_dir, out_dir, filename):
             r_mask_disc = np.zeros_like(diff, dtype='bool')
             r_mask_disc[np.round(contour[:, 0]).astype('int'), np.round(contour[:, 1]).astype('int')] = 1
             r_mask_disc = ndimage.binary_fill_holes(r_mask_disc)
+            r_mask_disc = dilation(r_mask_disc, square(5))
             #plt.imshow(r_mask_disc)
             
             contour=contours[sort_info[-2]]
             r_mask_cup = np.zeros_like(diff, dtype='bool')
             r_mask_cup[np.round(contour[:, 0]).astype('int'), np.round(contour[:, 1]).astype('int')] = 1
             r_mask_cup = ndimage.binary_fill_holes(r_mask_cup)
+            r_mask_cup = erosion(r_mask_cup, square(5))
             #plt.imshow(r_mask_cup)
             
             mask=np.zeros(shape = r_mask_cup.shape, dtype=np.uint8)
