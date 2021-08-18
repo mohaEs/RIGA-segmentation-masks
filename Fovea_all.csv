@@ -20,7 +20,7 @@
 18,BinRushed,BinRushed1-Corrected,image27prime.jpg,1274,820
 19,BinRushed,BinRushed1-Corrected,image28prime.jpg,1212,806
 20,BinRushed,BinRushed1-Corrected,image29prime.jpg,1307,801
-21,BinRushed,BinRushed1-Corrected,image2prime.jpg,1118,767
+21,BinRushed,BinRushed1-Corrected,image2prime.jpg,N,N
 22,BinRushed,BinRushed1-Corrected,image30prime.jpg,1194,689
 23,BinRushed,BinRushed1-Corrected,image31prime.jpg,1234,796
 24,BinRushed,BinRushed1-Corrected,image32prime.jpg,1244,816
@@ -48,7 +48,7 @@
 46,BinRushed,BinRushed1-Corrected,image6prime.jpg,1652,926
 47,BinRushed,BinRushed1-Corrected,image7prime.jpg,1321,832
 48,BinRushed,BinRushed1-Corrected,image8prime.jpg,1609,810
-49,BinRushed,BinRushed1-Corrected,image9prime.jpg,803,770
+49,BinRushed,BinRushed1-Corrected,image9prime.jpg,N,N
 0,BinRushed,BinRushed2,image10prime.jpg,911,813
 1,BinRushed,BinRushed2,image11prime.jpg,1425,813
 2,BinRushed,BinRushed2,image12prime.jpg,948,813
@@ -63,9 +63,9 @@
 11,BinRushed,BinRushed2,image20prime.jpg,761,815
 12,BinRushed,BinRushed2,image21prime.jpg,1615,821
 13,BinRushed,BinRushed2,image22prime.jpg,762,809
-14,BinRushed,BinRushed2,image23prime.jpg,949,360
+14,BinRushed,BinRushed2,image23prime.jpg,N,N
 15,BinRushed,BinRushed2,image24prime.jpg,1238,843
-16,BinRushed,BinRushed2,image25prime.jpg,826,801
+16,BinRushed,BinRushed2,image25prime.jpg,N,N
 17,BinRushed,BinRushed2,image26prime.jpg,1536,805
 18,BinRushed,BinRushed2,image27prime.jpg,1438,820
 19,BinRushed,BinRushed2,image28prime.jpg,N,N
@@ -99,7 +99,7 @@
 0,BinRushed,BinRushed3,image10prime.jpg,1436,826
 1,BinRushed,BinRushed3,image11prime.jpg,1209,801
 2,BinRushed,BinRushed3,image12prime.jpg,638,760
-3,BinRushed,BinRushed3,image13prime.jpg,0,0
+3,BinRushed,BinRushed3,image13prime.jpg,N,N
 4,BinRushed,BinRushed3,image14prime.jpg,1223,763
 5,BinRushed,BinRushed3,image15prime.jpg,1150,776
 6,BinRushed,BinRushed3,image16prime.jpg,1337,851
@@ -181,7 +181,7 @@
 35,BinRushed,BinRushed4,image42prime.jpg,1208,768
 36,BinRushed,BinRushed4,image43prime.jpg,1442,806
 37,BinRushed,BinRushed4,image44prime.jpg,919,827
-38,BinRushed,BinRushed4,image45prime.jpg,694,792
+38,BinRushed,BinRushed4,image45prime.jpg,N,N
 39,BinRushed,BinRushed4,image46prime.jpg,1608,812
 40,BinRushed,BinRushed4,image47prime.jpg,1387,834
 41,BinRushed,BinRushed4,image48prime.jpg,1470,832
@@ -631,7 +631,7 @@
 340,MESSIDOR,-,image407prime.tif,824,452
 341,MESSIDOR,-,image408prime.tif,632,507
 342,MESSIDOR,-,image409prime.tif,1304,912
-343,MESSIDOR,-,image40prime.tif,11288,779
+343,MESSIDOR,-,image40prime.tif,1288,779
 344,MESSIDOR,-,image410prime.tif,1019,813
 345,MESSIDOR,-,image411prime.tif,1007,848
 346,MESSIDOR,-,image412prime.tif,1363,847
