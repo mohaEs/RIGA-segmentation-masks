@@ -19,7 +19,7 @@ https://iovs.arvojournals.org/article.aspx?articleid=2791240 </br>
 https://iovs.arvojournals.org/article.aspx?articleid=2791086 </br>
 https://iovs.arvojournals.org/article.aspx?articleid=2791055 </br>
 
-And of course, you need to cite the original RIGA dataset separately: </br>
+And of course, you need to cite the original RIGA dataset as well: </br>
 https://doi.org/10.7302/Z23R0R29 </br>
 https://doi.org/10.1117/12.2293584
 
