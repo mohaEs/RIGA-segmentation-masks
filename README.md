@@ -15,16 +15,16 @@ original dataset annotations: </br>
 ## Citation 
 
 If you used this dataset, please cite one of the following reports: </br>
-https://iovs.arvojournals.org/article.aspx?articleid=2791240 
+- https://iovs.arvojournals.org/article.aspx?articleid=2791240 
 Eslami, M., Motati, L.S., Kalahasty, R., Hashemabad, S.K., Shi, M., Luo, Y., Tian, Y., Zebardast, N., Wang, M. and Elze, T., 2023. Deep Learning based Adversarial Disturbances in Fundus Image Analysis. Investigative Ophthalmology & Visual Science, 64(9), pp.PB002-PB002. </br>
-https://iovs.arvojournals.org/article.aspx?articleid=2791086 
+- https://iovs.arvojournals.org/article.aspx?articleid=2791086 
 Motati, L.S., Kalahasty, R., Hashemabad, S.K., Shi, M., Luo, Y., Tian, Y., Zebardast, N., Wang, M., Elze, T. and Eslami, M., 2023. Evaluation of Robustness of Disc/Cup Segmentation in Different Fundus Imaging Conditions. Investigative Ophthalmology & Visual Science, 64(8), pp.1129-1129.</br> 
-https://iovs.arvojournals.org/article.aspx?articleid=2791055 
+- https://iovs.arvojournals.org/article.aspx?articleid=2791055 
 Kalahasty, R., Motati, L.S., Hashemabad, S.K., Shi, M., Luo, Y., Tian, Y., Zebardast, N., Wang, M., Elze, T. and Eslami, M., 2023. Evaluation of Landmark Localization Models for Fundus Imaging Conditions. Investigative Ophthalmology & Visual Science, 64(8), pp.267-267.
 
 And of course, you need to cite the original RIGA dataset as well: </br>
-https://doi.org/10.7302/Z23R0R29 </br>
-https://doi.org/10.1117/12.2293584
+- https://doi.org/10.7302/Z23R0R29 </br>
+- https://doi.org/10.1117/12.2293584
 
 ## Reproduction
 
